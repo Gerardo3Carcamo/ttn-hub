@@ -1,0 +1,17 @@
+.hero {
+  min-height: calc(100vh - 3.7rem);
+}
+
+.text-color-secondary {
+  color: var(--color-text-muted, #6b7280);
+}
+
+.hero-card {
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.05));
+}
+
+.client-badge {
+  background: var(--color-secondary, #eaf0ff);
+  border: 1px solid var(--color-border, rgba(0, 0, 0, 0.05));
+  font-size: 0.85rem;
+}
