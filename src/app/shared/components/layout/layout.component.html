@@ -1,0 +1,18 @@
+<p-sidebar [(visible)]="showMenu" (onHide)="showMenu = false">
+    <ng-template pTemplate="header">
+        <h2 class="my-0 py-0">TTN Hub</h2>
+    </ng-template>
+    <div class="flex flex-column gap-2 justify-content-center">
+        @for (p of pages; track $index) {
+            <div class="item-page" (click)="navigate(p.Path)">
+                <i [class]="'pi ' + p.Icon"></i>
+                <label class="ml-2">{{p.Title}}</label>
+            </div>
+        }
+    </div>
+</p-sidebar>
+<app-topbar
+    (onMenuClick)="toggleMenu()"/>
+<main class="p-2">
+    <router-outlet/>
+</main>

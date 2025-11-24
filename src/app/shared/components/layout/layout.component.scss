@@ -1,0 +1,14 @@
+main {
+    margin-top: 56px;
+}
+.item-page {
+    cursor: pointer;
+    padding: 0.65rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in;
+}
+.item-page:hover {
+    color: white;
+    background-color: blue;
+    transition: all 0.3s ease-in;
+}
