@@ -5,9 +5,13 @@
       class="pi pi-bars" 
       style="color: white; cursor: pointer; font-weight: 700;"
       (click)="onMenuClick.emit()"></i>
-    <span style="color: white" class="ml-1 font-bold text-xl">TTN - GMR Hub</span>
+    <span style="color: white" class="ml-1 font-bold text-xl">TTN Hub</span>
   </div>
-  <div>
-    <p style="color: white;">Versión demo</p>
+  <div class="flex flex-column gap-1">
+    <div class="flex align-items-center gap-2" style="cursor: pointer;" (click)="doLogin()">
+      <i class="pi pi-sign-in"></i>
+      <label>Iniciar sesión</label>
+    </div>
+    <small class="flex justify-content-end" style="color: white;">Versión demo</small>
   </div>
 </header>
