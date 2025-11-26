@@ -75,9 +75,9 @@
 
     <div class="grid">
         <div class="col-12 md:col-4 mb-3">
-            <p-card class="h-full">
+            <p-card class="h-full" styleClass="shadow-4">
                 <ng-template pTemplate="header">
-                    <div class="flex align-items-center gap-2 p-2">
+                    <div class="flex align-items-center gap-2 pl-3 pt-3">
                         <i class="pi pi-users text-2xl"></i>
                         <span class="font-bold">Transporte de personal</span>
                     </div>
@@ -90,9 +90,9 @@
         </div>
 
         <div class="col-12 md:col-4 mb-3">
-            <p-card class="h-full">
+            <p-card class="h-auto" styleClass="shadow-4">
                 <ng-template pTemplate="header">
-                    <div class="flex align-items-center gap-2 p-2">
+                    <div class="flex align-items-center gap-2 pl-3 pt-3">
                         <i class="pi pi-map-marker text-2xl"></i>
                         <span class="font-bold">Rutas especiales</span>
                     </div>
@@ -105,9 +105,9 @@
         </div>
 
         <div class="col-12 md:col-4 mb-3">
-            <p-card class="h-full">
+            <p-card class="h-full" styleClass="shadow-4">
                 <ng-template pTemplate="header">
-                    <div class="flex align-items-center gap-2 p-2">
+                    <div class="flex align-items-center gap-2 pl-3 pt-3">
                         <i class="pi pi-compass text-2xl"></i>
                         <span class="font-bold">Monitoreo y seguimiento</span>
                     </div>
@@ -125,13 +125,15 @@
 <section class="clients px-3 py-4">
     <div class="text-center mb-3">
         <h2 class="text-2xl font-bold mb-1">Empresas que confían en TTN</h2>
-        <p class="text-color-secondary text-sm">
-            Integra aquí los logotipos de tus principales socios comerciales.
-        </p>
     </div>
 
-    <div class="flex flex-wrap justify-content-center gap-3">
-        <div 
+    <div class="flex flex-wrap justify-content-center">
+        @for (i of images; track $index) {
+            <div class="p-2 flex justify-content-center align-items-center">
+                <img [src]="i" width="200">
+            </div>
+        }
+        <!-- <div 
             class="client-badge border-round-xl px-3 py-2">
             TUPY Ramos Arizpe
         </div>
@@ -162,7 +164,7 @@
         <div 
             class="client-badge border-round-xl px-3 py-2">
             ACERO PRIME
-        </div>
+        </div> -->
     </div>
 </section>
 

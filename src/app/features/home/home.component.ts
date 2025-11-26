@@ -16,4 +16,15 @@ import { ButtonModule } from 'primeng/button'
 })
 export class HomeComponent {
 
+  images: string[] = [
+    'assets/socios/abc.png',
+    'assets/socios/acero.png',
+    'assets/socios/borg.png',
+    'assets/socios/lenox.png',
+    'assets/socios/mahle.png',
+    'assets/socios/tupy.png',
+    'assets/socios/tupy_sal.png',
+    'assets/socios/zf.png',
+  ];
+
 }

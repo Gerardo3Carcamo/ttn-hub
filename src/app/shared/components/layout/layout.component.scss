@@ -2,13 +2,32 @@ main {
     margin-top: 56px;
 }
 .item-page {
+    position: relative;
     cursor: pointer;
-    padding: 0.65rem;
+    padding: 0.65rem 1rem;
     border-radius: 1rem;
-    transition: all 0.3s ease-in;
+    overflow: hidden;
+    color: inherit;
+    transition: color 0.45s ease, transform 0.45s ease, box-shadow 0.45s ease;
 }
+
+/* Fondo animado */
+.item-page::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: linear-gradient(90deg, #2f2c79, #0c0057);
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    z-index: -1;
+}
+
+.item-page:hover::before {
+    transform: translateX(0); /* se “llena” de izq a der */
+}
+
 .item-page:hover {
-    color: white;
-    background-color: blue;
-    transition: all 0.3s ease-in;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
