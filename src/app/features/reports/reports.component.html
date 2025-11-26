@@ -1,0 +1,98 @@
+<div class="p-fluid p-formgrid grid pt-3 px-1">
+    <div class="field col-4">
+        <app-card header="GPS activos" icon="pi-map-marker">
+            <div class="flex flex-column justify-content-center">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero veniam natus earum illum, blanditiis pariatur, culpa eaque accusamus iure incidunt ratione aliquam optio impedit repellat officia nobis laborum nemo voluptatibus.</p>
+                <p-button
+                    icon="pi pi-file-excel"
+                    label="Descargar reporte diario"
+                    severity="success"/>
+            </div>
+        </app-card>
+    </div>
+    <div class="field col-4">
+        <app-card header="Usuarios activos" icon="pi pi-users">
+            <div class="flex flex-column justify-content-center">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero veniam natus earum illum, blanditiis pariatur, culpa eaque accusamus iure incidunt ratione aliquam optio impedit repellat officia nobis laborum nemo voluptatibus.</p>
+                <p-button
+                    icon="pi pi-file-excel"
+                    label="Descargar reporte diario"
+                    severity="success"/>
+            </div>
+        </app-card>
+    </div>
+    <div class="field col-4">
+        <app-card header="Socios comerciales" icon="pi pi-dollar">
+            <div class="flex flex-column justify-content-center">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero veniam natus earum illum, blanditiis pariatur, culpa eaque accusamus iure incidunt ratione aliquam optio impedit repellat officia nobis laborum nemo voluptatibus.</p>
+                <p-button
+                    icon="pi pi-file-excel"
+                    label="Descargar reporte diario"
+                    severity="success"/>
+            </div>
+        </app-card>
+    </div>
+    <div class="field col-12">
+        <p-table [value]="gpsData" #dt>
+            <ng-template pTemplate="caption">
+                <div class="flex justify-content-between gap-4">
+                    <p-iconField iconPosition="left">
+                        <p-inputIcon>
+                            <i class="pi pi-search"></i>
+                        </p-inputIcon>
+                        <input 
+                            pInputText 
+                            type="text"  
+                            placeholder="Filtrar resultados..." />
+                    </p-iconField>
+                    <p-button
+                        icon="pi pi-file-excel"
+                        severity="success"
+                        label="Descargar"/>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Carro</th>
+                    <th>Conductor</th>
+                    <th>Última actualización</th>
+                    <th>Última carga de gasolina</th>
+                    <th>Litros cargados</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-gps>
+                <tr>
+                    <td>{{gps.carro}}</td>
+                    <td>{{gps.conductor}}</td>
+                    <td>{{gps.ultimaActualizacion |date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{gps.gasolina |date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <td>{{gps.litros}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <div class="field col-12">
+        <p-table>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template></ng-template>
+        </p-table>
+    </div>
+    <div class="field col-12">
+        <p-table>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template></ng-template>
+        </p-table>
+    </div>
+</div>

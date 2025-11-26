@@ -21,7 +21,7 @@ export class LayoutComponent {
 
   pages: Page[] = [
     {
-      Path: '',
+      Path: '/reports',
       Icon: 'pi-file-excel',
       Title: 'Reportes'
     },

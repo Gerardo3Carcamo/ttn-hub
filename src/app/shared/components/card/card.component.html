@@ -1,0 +1,15 @@
+<div class="container shadow-4">
+    <div class="p-fluid p-formgrid grid">
+        @if (header !== '') {
+            <div class="field col-12 my-0 py-0 flex gap-2 align-items-center">
+                @if (icon !== '') {
+                    <i [class]="'pi ' + icon" style="font-size: 1.6rem;"></i>
+                }
+                <h2 class="my-0">{{header}}</h2>
+            </div>
+        }
+        <div class="field col-12 mt-3 mb-0 py-0">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
